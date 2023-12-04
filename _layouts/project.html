@@ -19,7 +19,7 @@ layout: default
         <h4> Our Research </h4>
         <h8>{{page.excerpt_intro}}</h8>
         <figure>
-            <img src="/assets/images/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="this is a placeholder image">
+            <img src="{{ page.header.image | relative_url }}" alt="this is a placeholder image">
             <!-- <figcaption>This is a figure caption.</figcaption> -->
         </figure>
 
@@ -39,7 +39,7 @@ layout: default
         <div class="researchers-section">
             {% for researcher in researchers%}
             <div class="researcher">
-              <img src="/assets/images/award.jpg" alt="Researcher 1">
+              <img src="{{ researcher.img_path | relative_url }}" alt="Researcher 1">
               <p>{{ researcher.name }}</p>
             </div>
             {% endfor %}

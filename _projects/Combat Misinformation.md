@@ -14,10 +14,12 @@ publications:
  - title: "Title 2"
    url:
 researchers:
- - name: "Title 1"
+ - name: "Award Winner"
    url: "#blank"
- - name: "Title 2"
-   url:
+   img_path: "/assets/images/award.jpg"
+ - name: "Second Author"
+   url: "#blank"
+   img_path: "/assets/images/award.jpg"
 ---
 
 

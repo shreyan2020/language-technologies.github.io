@@ -62,7 +62,8 @@ feature_row2:
       <h3>{{ paper.title }}</h3>
       <p>{{ paper.excerpt }}</p>
       {% assign paperTitleSlug = paper.title | slugify %}
-      <a href="/{{ paper.type }}/{{projectTitleSlug}}.html" class="btn btn--primary">Read More</a>
+      {% assign combinedUrl = paper.type | append: "/" | append: paperTitleSlug | append: ".html" %}
+      <a href="{{ combinedUrl | relative_url }}" class="btn btn--primary">Read More</a>
     </div>
 {% endfor %}
 </div>
@@ -76,7 +77,8 @@ feature_row2:
       <h3>{{ project.title }}</h3>
       <p>{{ project.excerpt }}</p>
       {% assign projectTitleSlug = project.title | slugify %}
-      <a href="/{{ project.type }}/{{projectTitleSlug}}.html" class="btn btn--primary">Read More</a>
+      {% assign combinedUrl = project.type | append: "/" | append: projectTitleSlug | append: ".html" %}
+      <a href="{{ combinedUrl | relative_url }}" class="btn btn--primary">Read More</a>
     </div>
 {% endfor %}
 </div>
