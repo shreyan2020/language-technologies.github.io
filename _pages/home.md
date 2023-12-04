@@ -15,65 +15,68 @@ excerpt: "Delft University of Technology."
 intro: 
   - excerpt: 'We design, develop, and deploy language technologies for safe use in societal and industrial organizations.'
 feature_row:
-  - title: "Answers to the key AI safety questions"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
-  - title: "Award winning Papers"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
-  - title: "Award winning Papers"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
-  - title: "Award winning Papers"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
+ - title: Latest News/ Upcoming Events
+feature_row1:
+ - title: Something inviting, highlighting selected works
 feature_row2:
   - title: "Our Research"
     excerpt: 'Our research spans a variety of ...The TU Delft STAR Lab focuses on individuals and groups who face many options or complicated implications. We research how bringing together data and models, peoples preferences, and AI reasoning can facilitate outcomes better for society. We make impact through partnering with companies, universities, municipalities, and government departments.'
-    url: "#test-link"
+    url: "/research-overview"
     btn_label: "explore all projects"
     btn_class: "btn--primary"
-feature_row3:
- -  title: "Democratizing Access"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
- -  title: "Combating Misinformation"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
- -  title: "Project X"
-    excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--small"
 ---
+<h3>{{ page.excerpt }}</h3>
+<!-- {% include feature_row id="intro" type="center" %} -->
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row id="feature_row" type="center" %}
+{% assign all_events = site.data.events | where_exp: "events", "events.status != 'archive'" %}
+<!-- {% assign limited_events = all_events | limit: 2 %} -->
 
-## Latest News/ Upcoming Events
-**Upcoming!** some information about the upcoming or past entry. [To the event ](#link){: .btn .btn--primary .align-left}
-{: .notice}
+{% for event in limited_events limit: 3 %}
+  {% if event.status == "upcoming" %}
+  <div class='notice'>
+<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
+  </div>
+{% else %}
+  <div class='notice'>
+{{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
 
-some information about the upcoming or past entry. [To the event ](#link){: .btn .btn--primary .align-left}
-{: .notice}
+  </div>
+  {% endif %}
+{% endfor %}
 
-some information about the upcoming or past entry. [To the event ](#link){: .btn .btn--primary .align-left}
-{: .notice}
-# Something inviting, highlighting selected works 
+{% include feature_row id="feature_row1" type="center" %}
 {: .text-center}
-{% include feature_row %}
+
+
+{% assign highlighted_paper_and_projects = site.data.projects | where_exp: "projects", "projects.highlight !=0 "%}
+
+{% assign highlighted_papers = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.type == 'paper' "%}
+
+{% assign highlighted_projects = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.type == 'project' "%}
+
+
+<div class="text-cards">
+{% for paper in highlighted_papers limit: 3%}
+   <div class="text-card">
+      <h3>{{ paper.title }}</h3>
+      <p>{{ paper.excerpt }}</p>
+      {% assign paperTitleSlug = paper.title | slugify %}
+      <a href="/{{ paper.type }}/{{projectTitleSlug}}.html" class="btn btn--primary">Read More</a>
+    </div>
+{% endfor %}
+</div>
+<!-- {% include feature_row %} -->
 
 {% include feature_row id="feature_row2" type="center" %}
-
-{% include feature_row id="feature_row3"%}
+{: .text-center}
+<div class="text-cards">
+{% for project in highlighted_projects limit: 3%}
+   <div class="text-card">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.excerpt }}</p>
+      {% assign projectTitleSlug = project.title | slugify %}
+      <a href="/{{ project.type }}/{{projectTitleSlug}}.html" class="btn btn--primary">Read More</a>
+    </div>
+{% endfor %}
+</div>

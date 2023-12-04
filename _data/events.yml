@@ -1,0 +1,8 @@
+- name: some information about the upcoming or past entry
+  status: upcoming
+- name: some information about the upcoming or past entry
+  status: old
+- name: some information about the upcoming or past entry
+  status: old
+- name: some information about the upcoming or past entry
+  status: archive
