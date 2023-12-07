@@ -15,7 +15,7 @@ applied_intro:
  - title: "Applied Research People"
    excerpt: "Hybrid data- and knowledge-driven development of language technologies, integrating inductive data-driven learning techniques with knowledge-based deductive and abductive reasoning capabilities."
 ---
-{% assign highlighted_paper_and_projects = site.data.projects"%}
+{% assign highlighted_paper_and_projects = site.data.projects%}
 
 {% assign foundation_projects = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.cat == 'foundation' "%}
 

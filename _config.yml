@@ -20,7 +20,7 @@ locale                   : "en-US"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Language Technologies Centre"
-description              : "An amazing website."
+description              : "Website for Language Technologies Centre WIS"
 url                      : https://shreyan2020.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : /language-technologies.github.io # the subpath of your site, e.g. "/blog"
 repository               : shreyan2020/language-technologies.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
