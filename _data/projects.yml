@@ -1,42 +1,134 @@
+# Enter project details
 - title: "Democratizing Access"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
+  header_description: "test-description"
+  page_excerpt: "assds"
   type: "project"
   cat: "foundation"
+  subcat: "project"
+  researchers:
+  - name: "Award Winner"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  - name: "Second Author"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  publications:
+  - title: "Title 1"
+    url: "#blank"
+  - title: "Title 2"
+    url:
   highlight: 1
+# Enter project details
 - title: "Combat Misinformation"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
+  header_description: "Our research spans a variety of ...The TU Delft STAR Lab focuses on individuals and groups who face many options or complicated implications. We research how bringing together data and models, peoples' preferences, and AI reasoning can facilitate outcomes better for society. We make impact through partnering with companies, universities, municipalities, and government departments."
+  page_excerpt: "Hybrid data- and knowledge-driven development of language technologies, integrating inductive data-driven learning techniques with knowledge-based deductive and abductive reasoning capabilities."
   type: "project"
   cat: "foundation"
+  subcat: "project"
+  researchers:
+  - name: "Award Winner"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  - name: "Second Author"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  publications:
+  - title: "Title 1"
+    url: "#blank"
+  - title: "Title 2"
+    url:
   highlight: 1
+# Enter project details
 - title: "Project X"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
+  header_description: "test-description"
+  page_excerpt: "assds"
   cat: "applied"
   type: "project"
+  subcat: "project"
+  researchers:
+  - name: "Award Winner"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  - name: "Second Author"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  publications:
+  - title: "Title 1"
+    url: "#blank"
+  - title: "Title 2"
+    url:
   highlight: 1
+# Enter project details
 - title: "Answers to the key AI safety questions"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
-  type: "paper"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n 3. Which value dimensions should an AI be optimised for” "
+  header_description: "test-description"
+  page_excerpt: "#test-link"
+  type: "project"
   cat: "foundation"
+  subcat: "paper"
+  researchers:
+  - name: "Award Winner"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  - name: "Second Author"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  publications:
+  - title: "Title 1"
+    url: "#blank"
+  - title: "Title 2"
+    url:
   highlight: 1
+# Enter project details
 - title: "front page mat"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
-  type: "paper"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
+  header_description: "test-description"
+  page_excerpt: "assds"
+  type: "project"
   cat: "applied"
+  subcat: "paper"
+  researchers:
+  - name: "Award Winner"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  - name: "Second Author"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  publications:
+  - title: "Title 1"
+    url: "#blank"
+  - title: "Title 2"
+    url:
   highlight: 0
+# Enter project details
 - title: "Award winning Papers"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
-  type: "paper"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
+  header_description: "test-description"
+  page_excerpt: "assds"
+  type: "project"
   cat: "foundation"
+  subcat: "paper"
   highlight: 1
 - title: "Front page material"
-  excerpt: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
-  url: "#test-link"
-  type: "paper"
+  summary: "1. Why does an AI generate a certain decision or content?\n 2. What does an AI need to know to act reliably?\n  3. Which value dimensions should an AI be optimised for” "
+  header_description: "test-description"
+  page_excerpt: "assds"
+  type: "project"
   cat: "applied"
+  subcat: "paper"
+  researchers:
+  - name: "Award Winner"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  - name: "Second Author"
+    url: "#blank"
+    img_path: "/assets/images/award.jpg"
+  publications:
+  - title: "Title 1"
+    url: "#blank"
+  - title: "Title 2"
+    url:
   highlight: 1

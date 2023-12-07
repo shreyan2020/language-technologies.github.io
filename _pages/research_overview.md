@@ -9,16 +9,7 @@ header:
   caption: "Photo credit: [Unsplash](https://unsplash.com/photos/macbook-pro-showing-programming-language-xrVDYZRGdw4)"
 excerpt: "Our research spans a variety of ...The TU Delft STAR Lab focuses on individuals and groups who face many options or complicated implications. We research how bringing together data and models, peoples' preferences, and AI reasoning can facilitate outcomes better for society. We make impact through partnering with companies, universities, municipalities, and government departments."
 excerpt_intro: 'Our Research Themes and Projects.'
-publications:
- - title: "Title 1"
-   url: "#blank"
- - title: "Title 2"
-   url:
-researchers:
- - name: "Title 1"
-   url: "#blank"
- - name: "Title 2"
-   url:
+
 ---
 <h3 class="text-center">{{page.excerpt_intro}}</h3>
 
@@ -49,9 +40,10 @@ researchers:
       {% for listing in foundation_listing %}
       <div class="text-card-vertical">
         <h3>{{ listing.title }}</h3>
-        <p>{{ listing.excerpt }}</p>
+        <p>{{ listing.summary }}</p>
         {% assign listingTitle = listing.title | slugify %}
-        <a href="/{{ listing.type }}/{{listingTitle}}.html" class="btn btn--primary">Read More</a>
+        {% assign combinedUrl = listing.type | append: "/" | append: listingTitle | append: ".html" %}
+      <a href="{{ combinedUrl | relative_url }}" class="read-more">Read More</a>
       </div>
       {% endfor %}
     </div>
@@ -64,9 +56,10 @@ researchers:
     {% for listing in applied_listing %}
       <div class="text-card-vertical">
         <h3>{{ listing.title }}</h3>
-        <p>{{ listing.excerpt }}</p>
+        <p>{{ listing.summary }}</p>
          {% assign listingTitle = listing.title | slugify %}
-        <a href="/{{ listing.type }}/{{listingTitle}}.html" class="btn btn--primary">Read More</a>
+          {% assign combinedUrl = listing.type | append: "/" | append: listingTitle | append: ".html" %}
+          <a href="{{ combinedUrl | relative_url }}" class="read-more">Read More</a>
       </div>
       {% endfor %}
     </div>

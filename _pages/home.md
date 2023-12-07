@@ -6,7 +6,7 @@ date: 2016-03-23T11:48:41-04:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/emile-perron-xrVDYZRGdw4-unsplash.jpg
+  overlay_image: /assets/images/header.jpg
 #   actions:
 #     - label: "Download"
 #       url: "https://github.com/mmistakes/minimal-mistakes/"
@@ -25,8 +25,8 @@ feature_row2:
     btn_label: "explore all projects"
     btn_class: "btn--primary"
 ---
-<h3>{{ page.excerpt }}</h3>
-<!-- {% include feature_row id="intro" type="center" %} -->
+<!-- <h3>{{ page.excerpt }}</h3> -->
+{% include feature_row id="intro" type="center" %}
 
 {% include feature_row id="feature_row" type="center" %}
 {% assign all_events = site.data.events | where_exp: "events", "events.status != 'archive'" %}
@@ -34,12 +34,12 @@ feature_row2:
 
 {% for event in limited_events limit: 3 %}
   {% if event.status == "upcoming" %}
-  <div class='notice'>
-<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
+  <div class='notice--primary'>
+<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="btn btn--success align-left ">To the event</a>
   </div>
 {% else %}
-  <div class='notice'>
-{{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
+  <div class='notice--primary'>
+{{ event.name }} <a href="#" class="btn btn--success align-left ">To the event</a>
 
   </div>
   {% endif %}
@@ -51,19 +51,19 @@ feature_row2:
 
 {% assign highlighted_paper_and_projects = site.data.projects | where_exp: "projects", "projects.highlight !=0 "%}
 
-{% assign highlighted_papers = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.type == 'paper' "%}
+{% assign highlighted_papers = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.subcat == 'paper' "%}
 
-{% assign highlighted_projects = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.type == 'project' "%}
+{% assign highlighted_projects = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.subcat == 'project' "%}
 
-
+{: .text-center}
 <div class="text-cards">
 {% for paper in highlighted_papers limit: 3%}
    <div class="text-card">
       <h3>{{ paper.title }}</h3>
-      <p>{{ paper.excerpt }}</p>
+      <p>{{ paper.summary }}</p>
       {% assign paperTitleSlug = paper.title | slugify %}
       {% assign combinedUrl = paper.type | append: "/" | append: paperTitleSlug | append: ".html" %}
-      <a href="{{ combinedUrl | relative_url }}" class="btn btn--primary">Read More</a>
+      <a href="{{ combinedUrl | relative_url }}" class="read-more">Read More</a>
     </div>
 {% endfor %}
 </div>
@@ -75,10 +75,10 @@ feature_row2:
 {% for project in highlighted_projects limit: 3%}
    <div class="text-card">
       <h3>{{ project.title }}</h3>
-      <p>{{ project.excerpt }}</p>
+      <p>{{ project.summary }}</p>
       {% assign projectTitleSlug = project.title | slugify %}
       {% assign combinedUrl = project.type | append: "/" | append: projectTitleSlug | append: ".html" %}
-      <a href="{{ combinedUrl | relative_url }}" class="btn btn--primary">Read More</a>
+      <a href="{{ combinedUrl | relative_url }}" class="read-more">Read More</a>
     </div>
 {% endfor %}
 </div>
