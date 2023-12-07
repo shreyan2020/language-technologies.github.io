@@ -15,18 +15,18 @@ search: false
     justify-content: space-around;
   }
   
-  .text-card {
-    width: calc(33.33% - 20px);
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 5px solid rgb(204, 204, 204);
-    border-radius: 30px;
-  }
-  
-  .text-card h3 {
-    margin-top: 0;
-  }
-  
+.text-card {
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 5px solid rgb(204, 204, 204);
+  border-radius: 30px;
+}
+
+.text-card h3 {
+  margin-top: 0;
+}
+
 
 //  From here vertical classes
 .main-sections {
@@ -116,10 +116,10 @@ search: false
     transition: background-color 0.3s, color 0.3s;
   }
   
-  .read-more:hover {
-    background-color: #ff0090 ;
-    color: #ffffff;
-  }
+.read-more:hover {
+  background-color: #ff0090 ;
+  color: #ffffff;
+}
 
 
 

@@ -35,11 +35,11 @@ feature_row2:
 {% for event in limited_events limit: 3 %}
   {% if event.status == "upcoming" %}
   <div class='notice--primary'>
-<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="btn btn--success align-left ">To the event</a>
+<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
   </div>
 {% else %}
   <div class='notice--primary'>
-{{ event.name }} <a href="#" class="btn btn--success align-left ">To the event</a>
+{{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
 
   </div>
   {% endif %}

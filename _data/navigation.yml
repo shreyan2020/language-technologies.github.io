@@ -1,11 +1,11 @@
 # main links
 main:
   - title: "Projects"
-    url: /research-overview/
+    url: /research-overview
   - title: "Researchers"
-    url: /researchers/
+    url: /researchers
   - title: "Contact"
-    url: /contact-us/
+    url: /contact-us
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
