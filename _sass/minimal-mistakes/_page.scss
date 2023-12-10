@@ -20,6 +20,8 @@
 }
 
 body {
+  // width: 88%;
+  // margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,6 +187,7 @@ body {
   -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s;
 
+
   &--overlay {
     position: relative;
     margin-bottom: 2em;
@@ -197,6 +200,7 @@ body {
     animation: $intro-transition;
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
+    height: 20em; //added to reduce the width of the image
 
     a {
       color: #fff;
@@ -217,6 +221,10 @@ body {
     .btn {
       color: #fff;
       text-shadow: 1px 1px 4px rgba(#000, 0.5);
+      // custom code added
+      white-space: break-spaces;
+      margin-bottom: -1em;
+      // font-weight: bold;
     }
 
     .page__lead {

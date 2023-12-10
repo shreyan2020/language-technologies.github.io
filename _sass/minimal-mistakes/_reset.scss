@@ -56,6 +56,9 @@ main,
 nav,
 section {
   display: block;
+  // custom style
+  width: 95%;
+  margin: 0 auto;
 }
 
 /* Display block in IE6-9 and FF3 */
