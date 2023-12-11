@@ -15,11 +15,11 @@ excerpt_intro: 'Our Research Themes and Projects.'
 {% for event in all_events %}
   {% if event.status == "upcoming" %}
   <div class='notice--primary'>
-<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="read-more align-left ">To the event</a>
+<font color="#9900FF"> Upcoming </font>{{ event.name }} 
   </div>
 {% else %}
   <div class='notice--primary'>
-{{ event.name }} <a href="#" class="read-more align-left ">To the event</a>
+{{ event.name }}
 
   </div>
   {% endif %}
