@@ -36,11 +36,13 @@ feature_row2:
 {% for event in all_events limit: 3 %}
   {% if event.status == "upcoming" %}
   <div class='notice--primary'>
-<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="#" class="read-more align-left ">To the event</a>
+    {% assign combinedUrl = "/events" %}
+<font color="#9900FF"> Upcoming </font>{{ event.name }} <a href="{{ combinedUrl | relative_url }}" class="read-more align-left ">To the event</a>
   </div>
 {% else %}
   <div class='notice--primary'>
-{{ event.name }} <a href="#" class="read-more align-left ">To the event</a>
+  {% assign combinedUrl = "/events" %}
+{{ event.name }} <a href="{{ combinedUrl | relative_url }}" class="read-more align-left ">To the event</a>
 
   </div>
   {% endif %}
