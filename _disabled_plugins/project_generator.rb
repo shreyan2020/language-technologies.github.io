@@ -9,9 +9,7 @@ module Jekyll
           projects.each do |project|
             project_title = project['title']
             project_file_path = "#{project_title.downcase.gsub(' ', '-')}.md"
-            # FileUtils.mkdir_p(File.dirname(project_file_path))
             dir = '_projects'
-            # puts project_file_path
             page = ProjectPage.new(site, site.source, dir, project_file_path, project)
             site.pages << page
             page.write_new_page

@@ -26,14 +26,14 @@ applied_intro:
     {% for researcher in project.researchers%}
         {% if counter < 4 %}
     <div class="researcher">
-        <img src="{{ researcher.img_path | relative_url }}" alt="Researcher 1">
+        <img src="{{ researcher.img_path | relative_url }}" alt="{{ researcher.name }}">
         <p>{{ researcher.name }}</p>
     </div>
         {% assign counter = counter | plus: 1 %}
     {% endif %}
     {% endfor %}
     {% endfor %}
-    <!-- Add more researchers as needed -->
+
     </div>
 
 {% assign applied_projects = highlighted_paper_and_projects | where_exp: "highlighted_paper_and_projects", "highlighted_paper_and_projects.cat == 'applied' "%}
@@ -45,12 +45,11 @@ applied_intro:
     {% for researcher in project.researchers %}
     {% if counter < 4 %}
     <div class="researcher">
-        <img src="{{ researcher.img_path | relative_url }}" alt="Researcher 1">
+        <img src="{{ researcher.img_path | relative_url }}" alt="{{ researcher.name }}">
         <p>{{ researcher.name }}</p>
     </div>
     {% assign counter = counter | plus: 1 %}
     {% endif %}
     {% endfor %}
     {% endfor %}
-    <!-- Add more researchers as needed -->
-    </div>
+  </div>

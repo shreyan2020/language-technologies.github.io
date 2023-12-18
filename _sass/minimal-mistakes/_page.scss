@@ -66,6 +66,9 @@ body {
       margin-right: 0;
       width: 100%;
       clear: both;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
   }
 }

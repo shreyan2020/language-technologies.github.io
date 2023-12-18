@@ -4,12 +4,7 @@ layout: splash
 permalink: /
 date: 2016-03-23T11:48:41-04:00
 header:
-  # overlay_color: "#000"
-  # overlay_filter: "0.5"
   overlay_image: /assets/images/header.jpg
-#     - label: "Download"
-#       url: "https://github.com/mmistakes/minimal-mistakes/"
-  # caption: "Photo credit: [Unsplash](https://unsplash.com/photos/macbook-pro-showing-programming-language-xrVDYZRGdw4)"
 excerpt: "Technical University of Delft"
 intro: 
   - excerpt: 'We design, develop, and deploy language technologies for safe use in societal and industrial organizations.'
@@ -26,12 +21,9 @@ feature_row2:
 ---
 
 
-<!-- <h3>{{ page.excerpt }}</h3> -->
 {% include feature_row id="intro" type="center" %}
-
 {% include feature_row id="feature_row" type="center" %}
 {% assign all_events = site.data.events | where_exp: "events", "events.status != 'archive'" %}
-<!-- {% assign limited_events = all_events | limit: 2 %} -->
 
 {% for event in all_events limit: 3 %}
   {% if event.status == "upcoming" %}
@@ -70,7 +62,6 @@ feature_row2:
     </div>
 {% endfor %}
 </div>
-<!-- {% include feature_row %} -->
 
 {% include feature_row id="feature_row2" type="center" %}
 {: .text-center}

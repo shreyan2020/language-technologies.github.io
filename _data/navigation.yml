@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Projects"
+  - title: "News & Events"
+    url: /events
+  - title: "Research"
     url: /research-overview
-  - title: "Researchers"
-    url: /researchers
+  - title: "Collaboration"
+    url: /collaborations
   - title: "Contact"
     url: /contact-us
   # - title: "Sample Collections"

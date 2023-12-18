@@ -13,26 +13,19 @@ layout: default
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
-
     <section class="page__content" itemprop="text">
         <h4> Our Research </h4>
         <h8>{{page.excerpt_intro}}</h8>
         <figure>
             <img src="{{ page.header.overlay_image | relative_url }}" alt="this is a placeholder image">
-            <!-- <figcaption>This is a figure caption.</figcaption> -->
         </figure>
-
-        <!-- {% include feature_row id="{page.excerpt_intro}" type="center" %} -->
-
         {% assign publications = page.publications%}
-        <!-- {% assign limited_events = all_events | limit: 2 %} -->
         <h6>Our Publications</h6>
         {% for publication in publications%}
         <div class='notice'>
             {{ publication.title }} <a href="#" class="btn btn--primary align-right ">To the Publication</a>
         </div>
         {% endfor %}
-
         <h6>The Researchers</h6>
         {% assign researchers = page.researchers%}
         <div class="researchers-section">
@@ -43,36 +36,7 @@ layout: default
               <p>{{ researcher.name }}</p>
             </div>
             {% endfor %}
-            <!-- Add more researchers as needed -->
           </div>
-
-        <!-- <h3>{{all_events}}</h3> -->
-        <!-- {% if event.status == "upcoming" %} -->
-         
-    
-        <!-- {% else %} -->
-        <!-- <div class='notice'>
-        {{ event.name }} <a href="#" class="btn btn--primary align-left ">To the event</a>
-
-        </div> -->
-        <!-- {% endif %} -->
-       
-
-<!-- 
-        {: .text-center}
-        <div class="text-cards">
-        {% assign papers = site.data.research | where_exp: "research", "research.higlight != 0"%}
-        {% for row in papers limit: 3%}
-        <div class="text-card">
-            <h3>{{ row.title }}</h3>
-            <p>{{ row.excerpt }}</p>
-            <a href="{{ row.url }}" class="read-more">Read More</a>
-            </div>
-        {% endfor %}
-        </div> -->
-                <!-- {% include feature_row %} -->
-
-                <!-- {% include feature_row id="researchers" type="center" %} -->
     </section>
   </article>
 </div>

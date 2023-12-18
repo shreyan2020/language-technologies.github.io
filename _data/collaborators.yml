@@ -1,0 +1,30 @@
+- name: TU Delft AI Initiative
+  type: internal
+- name: Digital Ethics Center
+  type: internal
+- name: AiTech
+  type: internal
+- name: Human-Centered AI Systems
+  type: internal
+- name: Erasmus MC
+  type: external
+- name: Kickstart.AI
+  type: external
+- name: DSM
+  type: external
+- name: KLM
+  type: external
+- name: ING
+  type: external
+- name: Elsvier
+  type: external
+- name: Alliander
+  type: external
+- name: KB
+  type: external
+- name: Public Space
+  type: external
+- name: Amazon
+  type: external
+- name: Oracle
+  type: external
