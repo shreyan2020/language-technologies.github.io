@@ -10,3 +10,5 @@
 - Custom styles are available under assets/css/main.scss
 
 - Images need to be stored under assets/images/
+
+- Ensure _config.yml is up to date based on repo and remote server address
